@@ -44,7 +44,7 @@
 
     <section class="location" id="location">
 
-        <h1 class="heading"> <span>Location</span> </h1>
+        <h1 class="heading"><span>Location</span> </h1>
     
         <form action="Fill_in_API_here" method="post" id="form">
     
@@ -121,5 +121,49 @@
         </form>
         
     </section>
+
+
+
+
+    <script>
+        document.getElementById("locationForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Prevents default form submission
+
+            const city = document.getElementById("city").value;
+            const county = document.getElementById("county").value;
+            const state = document.getElementById("state").value;
+
+            if (!state) {
+                document.getElementById("responseMessage").innerText = "Please select a state.";
+                return;
+            }
+
+            const formData = {
+                city: city,
+                county: county,
+                state: state
+            };
+
+            try {
+                const response = await fetch("Fill_API_Here", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    document.getElementById("responseMessage").innerText = "Success: " + data.message;
+                } else {
+                    document.getElementById("responseMessage").innerText = "Error: " + data.error;
+                }
+            } catch (error) {
+                document.getElementById("responseMessage").innerText = "Network error. Please try again.";
+            }
+        });
+    </script>
 </body>
 </html>

@@ -93,6 +93,13 @@ section {
 
 /* Header section ends */
 
+
+
+
+
+/* Location form section starts */
+
+
 .location {
     background: url(../image/banner-bg.jpg) no-repeat;
     background-position: center;
@@ -166,3 +173,5 @@ nav a.active {
     margin: .7rem 0;
     border: var(--border);
 }
+
+/* Location form section ends */

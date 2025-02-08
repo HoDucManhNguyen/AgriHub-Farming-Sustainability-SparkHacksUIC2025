@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import Form from './Form.jsx'
+import Form from './Component/Form.jsx'
+import Menu from './Component/Menu.jsx'
 
 function App() {
   return (
     <div>
-      <Form />
+      <Menu />
     </div>
   )
 }

@@ -1,0 +1,70 @@
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    color: var(--main-color);
+    font-size: 2.3rem;
+}
+
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+.home {
+    min-height: 100vh;
+    padding-top: 12rem;
+    background: url(../images/home.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*The flex-wrap property specifies whether the flexible items should wrap or not.*/
+/*The gap property defines the size of the gap between the rows and columns.*/
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 42rem;
+}
+
+.home .row .image {
+    flex: 1 1 42rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.home .row .image img {
+    height: 35rem;
+    animation: float 4s linear infinite;
+}

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/index.ts",
-    "start:dev": "nodemon ./src/index.js"
+    "start:dev": "nodemon ./src/index.js",
+    "json-server": "json-server --watch db.json --port 3002"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "json-server": "^1.0.0-beta.3",
     "mongodb": "^6.13.0",
     "nodemon": "^3.1.9",
     "openai": "^4.83.0"

@@ -2,7 +2,7 @@
 
 :root {
     --blue: #0F3228;
-    --dark-color: #70821F;
+    --dark-color: #00BF63;
     --black: #444;
     --light-color: #666;
     --border: .1rem solid rgba(0, 0, 0, .1);
@@ -45,6 +45,10 @@ section {
 
 
 /* Header section starts */
+.fa-seedling {
+    color: #00BF63;
+}
+
 .header {
     top: 0;
     left: 0;
@@ -83,13 +87,13 @@ section {
 }
 
 
-.home {
+/* .home {
     min-height: 90vh;
     padding-top: 12rem;
-    background: url(../images/home.jpg) no-repeat;
+    background: url(../image/background.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
 /* Header section ends */
 
@@ -97,10 +101,12 @@ section {
 
 /* Home section starts */
 .home {
-    background: url(../image/banner-bg.jpg) no-repeat;
+    background: url(../image/background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    padding-top: 12rem;
+    height: 110vh;
+    margin-top: 5rem;
 }
 
 .home .row {
@@ -156,6 +162,13 @@ section {
 
 }
 
+.header .navbar a:hover {
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+}
+
+
+
 
 /* Home section ends */
 
@@ -192,7 +205,7 @@ section {
     transform: translate(-50%, -50%);
     width: 100%;
     color: #443;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 
@@ -340,7 +353,7 @@ section {
 
 .category .slide .content .icons a i {
     padding-right: .5rem;
-    color: #27c7d7;
+    color: #0F3228;
 }
 
 .category .slide .content .icons a:hover {
@@ -418,7 +431,7 @@ section {
 }
 
 .banner .content span {
-    color: #eb4d4b;
+    color: #00BF63;
     font-size: 1.7rem;
 }
 
@@ -477,7 +490,7 @@ section {
 }
 
 .footer .box-container .box a:hover {
-    color: var(--blue);
+    color: #00BF63;
 }
 
 .footer .box-container .box a:hover i {

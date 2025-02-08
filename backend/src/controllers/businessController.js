@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const JSON_SERVER_URL = 'http://localhost:3002/businesses';
 
-export const businessController = {
+export const businessController = { // almost all doesn't work ??
     async getAllBusinesses(req, res) {
         try {
             const response = await axios.get(JSON_SERVER_URL);
@@ -14,7 +14,8 @@ export const businessController = {
 
     async getBusinessById(req, res) {
         try {
-            const { id } = req.params;
+            const { id } = parseInt(req.params, 10);
+            console.log(id)
             const response = await axios.get(`${JSON_SERVER_URL}/${id}`);
             res.json(response.data);
         } catch (error) {
@@ -36,6 +37,15 @@ export const businessController = {
         try {
             const { id } = req.params;
             const updatedBusiness = req.body;
+            console.log(id)
+            console.log(updatedBusiness)
+            // get the old object, keep everything and add the keys:values object as updatedBusiness
+            
+            const updatedBusinesstest = { ...business.data, ...updatedBusiness };
+
+            console.log("CHECK UPDATE BUSINESS")
+            console.log(updatedBusinesstest)
+
             const response = await axios.put(`${JSON_SERVER_URL}/${id}`, updatedBusiness);
             res.json(response.data);
         } catch (error) {

@@ -46,13 +46,95 @@
     <!-- Business data section ends -->
 
     <script>
+        async function fetchBusinessReview(company, businessId) {
+            console.log("this is a check at fetch!!! CHECK HERE")
+            businessId = parseInt(businessId);
+            var data = null;
+            try {
+                const response = await fetch(`http://localhost:3002/businesses/${businessId}`);
+                data = await response.json();
+                console.log('Business: CHECK HEHREHRHEHRE' );
+                console.log(data);
+                
+            } catch (error) {
+                console.error('Error fetching business:', error);
+                return null;
+            }
+            console.log("CHECKING DATA")
+            console.log(data)
+            // calling open api to get review (only call if there is no review key of the object)
+            if (!data.review) { // if review key doesn't exist, we get the review
+                try {
+                    const response = await fetch("http://localhost:3000/api/review", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ "company": company })
+                    });
+                    
+                    const review = await response.json();
+                    
+
+                    const res = await fetch(`http://localhost:3002/businesses/${businessId}`);
+                    const data = await res.json();
+                    console.log('Business: CHECK HEHREHRHEHRE' );
+                    console.log(data);
+                    const updatedBusiness = {
+                        ...data,
+                        review
+                    };
+                    console.log(updatedBusiness);
+
+                    await updateBusinessReview(businessId, updatedBusiness);
+
+                    return data;
+                } catch (error) {
+                    console.error('Error fetching business review:', error);
+                    return null;
+                }
+            }
+        }
+
+        async function updateBusinessReview(businessId, updatedBusiness) {
+            console.log("this is a check at UPDATE BUSINESS REVIEW")
+            console.log(businessId, updatedBusiness);
+
+            try {
+                const response = await fetch(`http://localhost:3002/businesses/${businessId}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(updatedBusiness)
+                });
+
+                const data = await response.json();
+                console.log('Updated Business:', data);
+                return data;
+            } catch (error) {
+                console.error('Error updating business review:', error);
+                return null;
+            }
+        }
+
         async function fetchBusinessData() {
             try {
-                const response = await fetch("http://localhost:3000/api/businesses");
+                // const response = await fetch("http://localhost:3000/api/businesses");
+                const response = await fetch("http://localhost:3002/businesses");
                 const data = await response.json();
                 const businessContainer = document.getElementById("businessContainer");
-
+                // loop data and console.log business_name
+                
                 if (Array.isArray(data)) {
+                    for (let i = 0; i < data.length; i++) {
+                        const business = data[i];
+                        console.log("we are now here?")
+                        console.log(business.business_name);
+                        console.log(business.id);
+                        const review = await fetchBusinessReview(business.business_name, business.id);
+                    }
+
                     businessContainer.innerHTML = data.map(business => `
                         <form>
                         <div class="card" id="card2">
@@ -67,6 +149,14 @@
                                 <p class="card-text"><b>Service Area:</b> ${business.service_area}</p>
                                 <p class="card-text"><b>Registration:</b> ${business.registration ? 'Yes' : 'No'}</p>
                                 <p class="card-text"><b>Insurance:</b> ${business.insurance ? 'Yes' : 'No'}</p>
+                                ${business.review ? `<p class="card-text"><b>Review:</b></p>` : ''}
+                                <ul>
+                                    ${business.review ? `<li class="card-text">${business.review.response['Customer Service']}</li>` : ''}
+                                    ${business.review ? `<li class="card-text">${business.review.response['Pricing']}</li>` : ''}
+                                    ${business.review ? `<li class="card-text">${business.review.response['Reputation']}</li>` : ''}
+                                    ${business.review ? `<li class="card-text">${business.review.response['Sustainability']}</li>` : ''}
+                                    ${business.review ? `<li class="card-text">${business.review.response['VERDICT']}</li>` : ''}
+                                </ul>
                             </div>
                             <div class="card-actions">
                                 <button type="button" class="btn approve" onclick="handleAction(this, 'Approved Successfully', '#00BF63')">Accept</button>

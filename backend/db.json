@@ -1,7 +1,7 @@
 {
   "businesses": [
     {
-      "id": 1,
+      "id": "1",
       "business_name": "Green Farms Co",
       "address": "123 Farm Road, Chicago, IL 60601",
       "contact_information": {
@@ -16,10 +16,19 @@
       "year_in_business": 10,
       "service_area": "Greater Chicago Area",
       "registration": true,
-      "insurance": true
+      "insurance": true,
+      "review": {
+        "response": {
+          "Reputation": "Green Farms Co. has an excellent reputation within the agriculture community, being well-regarded for its high-quality produce and reliability.",
+          "Sustainability": "The company demonstrates a strong commitment to sustainability with eco-friendly farming practices, reduced water usage, and minimal carbon footprint. This is a standout feature.",
+          "Pricing": "Pricing is competitive, offering good value without cutting corners on quality or ethical practices.",
+          "Customer Service": "Green Farms Co. is praised for its responsive and friendly customer service, always going the extra mile to address client needs.",
+          "VERDICT": "Green Farms Co. is a fantastic company, excelling in reputation, sustainability, and customer service while maintaining fair pricing. Highly recommended."
+        }
+      }
     },
     {
-      "id": 2,
+      "id": "2",
       "business_name": "John Deere",
       "address": "One John Deere Place, Moline, IL 61265",
       "contact_information": {
@@ -34,10 +43,19 @@
       "year_in_business": 184,
       "service_area": "Worldwide",
       "registration": true,
-      "insurance": true
+      "insurance": true,
+      "review": {
+        "response": {
+          "Reputation": "John Deere has an outstanding reputation as a leading name in agricultural machinery, recognized globally for its innovation and reliability.",
+          "Sustainability": "John Deere demonstrates strong commitment to sustainability through programs like reducing carbon emissions and creating equipment aimed at precision agriculture to minimize waste.",
+          "Pricing": "John Deere equipment is premium-priced, but most customers consider it a good return on investment due to the durability and advanced technology provided.",
+          "Customer Service": "Excellent customer service with widespread support networks and readily available parts, but a few complaints about response times in certain regions.",
+          "VERDICT": "John Deere is a great company for farmers seeking reliable, sustainable, and high-quality machinery, despite the higher pricing."
+        }
+      }
     },
     {
-      "id": 3,
+      "id": "3",
       "business_name": "Organic Solutions",
       "address": "456 Green Street, Chicago, IL 60602",
       "contact_information": {
@@ -52,60 +70,16 @@
       "year_in_business": 5,
       "service_area": "Chicago Metropolitan Area",
       "registration": true,
-      "insurance": true
-    },
-    {
-      "id": 4,
-      "business_name": "AgriTech Innovations",
-      "address": "789 Innovation Drive, San Francisco, CA 94103",
-      "contact_information": {
-        "email": "contact@agritech.com",
-        "phone": "415-555-1234",
-        "url": "www.agritech.com"
-      },
-      "business_type": [
-        "agricultural technology",
-        "precision farming"
-      ],
-      "year_in_business": 8,
-      "service_area": "California",
-      "registration": true,
-      "insurance": true
-    },
-    {
-      "id": 5,
-      "business_name": "Farm Fresh Produce",
-      "address": "321 Market Street, New York, NY 10001",
-      "contact_information": {
-        "email": "sales@farmfresh.com",
-        "phone": "212-555-6789",
-        "url": "www.farmfresh.com"
-      },
-      "business_type": [
-        "fresh produce",
-        "organic vegetables"
-      ],
-      "year_in_business": 12,
-      "service_area": "New York City",
-      "registration": true,
-      "insurance": true
-    },
-    {
-      "id": "318d",
-      "business_name": "t",
-      "address": "123",
-      "contact_information": {
-        "email": "t@gmail.com",
-        "phone": "321-463-9999",
-        "url": "http://www.google.com"
-      },
-      "business_type": [
-        "seed_supplier"
-      ],
-      "year_in_business": 3,
-      "service_area": "Unknown",
-      "registration": true,
-      "insurance": true
+      "insurance": true,
+      "review": {
+        "response": {
+          "Reputation": "Organic Solutions is highly regarded within the farming community for delivering quality organic products and adhering to industry standards.",
+          "Sustainability": "The company demonstrates a strong commitment to sustainability by using environmentally friendly practices, reducing waste, and supporting biodiversity.",
+          "Pricing": "Pricing is slightly above average but reasonable given the organic and sustainable nature of its products.",
+          "Customer Service": "Customer service is responsive, friendly, and goes the extra mile to solve issues, ensuring a positive customer experience.",
+          "VERDICT": "Organic Solutions is a great company with a strong commitment to sustainability, excellent reputation, fair pricing, and outstanding customer service."
+        }
+      }
     }
   ]
 }

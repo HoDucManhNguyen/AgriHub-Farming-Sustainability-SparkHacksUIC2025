@@ -7,16 +7,18 @@ if (!process.env.OPENAI_API_KEY) {
 }
 
 export const chatService = {
-    async generateResponse(prompt) {
+    async generateResponse(prompt_user, prompt_system) {
         const openai = new OpenAI({
             apiKey: process.env.OPENAI_API_KEY
         });
+
+        const system_prompt_location = ""
         try {
             const completion = await openai.chat.completions.create({
-                model: "gpt-4o-mini",
+                model: "gpt-4o-2024-11-20",
                 messages: [
-                    { role: "system", content: "You are a helpful assistant." },
-                    { role: "user", content: prompt },
+                    { role: "system", content: prompt_system},
+                    { role: "user", content: prompt_user},
                 ],
                 store: true,
             });

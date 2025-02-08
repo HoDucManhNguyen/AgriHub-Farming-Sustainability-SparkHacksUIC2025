@@ -36,14 +36,6 @@ section {
 }
 
 
-
-
-
-
-
-
-
-
 /* Header section starts */
 .header {
     top: 0;
@@ -98,7 +90,10 @@ section {
 
 
 /* Location form section starts */
-
+span {
+    display: block;
+    height: 15rem;
+}
 
 .location {
     background: url(../image/banner-bg.jpg) no-repeat;
@@ -172,6 +167,23 @@ nav a.active {
     color: var(--main-color);
     margin: .7rem 0;
     border: var(--border);
+}
+
+select {
+    background: none;
+
+    border: var(--border);
+    padding: 10px;
+    font-size: 1.6rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+select::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
 }
 
 /* Location form section ends */

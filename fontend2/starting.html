@@ -44,15 +44,13 @@
 
     <section class="location" id="location">
 
-        <h1 class="heading"><span>Location</span> </h1>
+        <h1 class="heading"><span>Location</span></h1>
     
-        <form action="http://localhost:3000/api/form" method="post" id="form">
+        <form id="locationForm">
+
     
-            <label class="heading"> <span>Input Location</span> </label>
-    
-                <!--City-->
-                <input type="text" placeholder="City" class="box" id="city" name="city">
-            </div>
+            <!--City-->
+            <input type="text" placeholder="City" class="box" id="city" name="city">
     
             <!--County-->
             <input type="text" placeholder="County" class="box" name="county" id="county">
@@ -128,33 +126,35 @@
     <script>
         document.getElementById("locationForm").addEventListener("submit", async function(event) {
             event.preventDefault(); // Prevents default form submission
-
+    
             const city = document.getElementById("city").value;
             const county = document.getElementById("county").value;
             const state = document.getElementById("state").value;
-
+    
             if (!state) {
                 document.getElementById("responseMessage").innerText = "Please select a state.";
                 return;
             }
-
+    
             const formData = {
                 city: city,
                 county: county,
                 state: state
             };
-
+    
             try {
-                const response = await fetch("Fill_API_Here", {
+                const response = await fetch("http://localhost:3000/api/form", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify(formData)
                 });
-
+    
                 const data = await response.json();
 
+                console.log(data);
+    
                 if (response.ok) {
                     document.getElementById("responseMessage").innerText = "Success: " + data.message;
                 } else {

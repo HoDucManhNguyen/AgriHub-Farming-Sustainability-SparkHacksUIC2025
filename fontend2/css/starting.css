@@ -140,6 +140,10 @@ nav a.active {
     text-decoration: underline var(--border-hover);
 }
 
+.header .navbar a:hover {
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+}
 
 .show {
     display: none;

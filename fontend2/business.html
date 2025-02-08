@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriHub</title>
+
+    <!-- Link to swiper css  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Link to get icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="./css/business.css">
+    <link rel="stylesheet" href="./css/starting.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Logo website -->
+    <link rel="icon" href="./image/webiste-logo.svg" type="image/x-icon" />
+</head>
+<body>
+    
+    <!-- Header section starts -->
+    <header class="header">
+        <div id="menu-btn"></div>
+        <a href="#" class="logo"><i class="fa fa-seedling"></i>AgriHub</a>
+        
+        <nav class="navbar">
+            <a data-active="home" href="index.html">home</a>
+            <a data-active="Business" href="#">Business</a>
+            <a data-active="location" href="location.html">location</a>
+        </nav>
+        
+        <a href="starting.html" class="btn">Getting Started</a>
+    </header>
+    <!-- Header section ends -->
+
+    <section class="location" id="location">
+        <h1 class="heading"><span>User Information</span></h1>
+    
+        <form id="businessForm">
+            <!-- Business name -->
+            <input type="text" placeholder="Business Name" class="box" id="business_name" name="business_name">
+    
+            <!-- Address -->
+            <input type="text" placeholder="Address" class="box" name="address" id="address">
+    
+            <!-- Phone -->
+            <input type="tel" placeholder="Phone" class="box" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+            <!-- Email -->
+            <input type="email" placeholder="Email" class="box" name="email" id="email">
+
+            <!-- URL -->
+            <input type="url" placeholder="Website URL" class="box" name="url" id="url">
+
+            <!-- Year Operating-->
+            <input type="date" placeholder="Established Date" class="box" name="date" id="date">
+
+            <!-- Business Type -->
+            <select name="business_type" id="business_type" onchange="toggleOtherInput()">
+                <option value="">Business Type</option>
+                <option value="seed_supplier">Seed Supplier</option>
+                <option value="equipment_rental">Equipment Rental</option>
+                <option value="farm_consulting">Farm Consulting</option>
+                <option value="pest_control">Pest Control</option>
+                <option value="soil_testing">Soil Testing</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Hidden input field for "Other" selection -->
+            <input type="text" id="other_business" class="box" name="other_business" placeholder="Please specify..." style="display: none; margin-top: 10px;">
+        
+            <!-- Submit button -->
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </section>
+
+    <script>
+        function toggleOtherInput() {
+            var select = document.getElementById("business_type");
+            var otherInput = document.getElementById("other_business");
+
+            if (select.value === "other") {
+                otherInput.style.display = "block"; // Show input field
+            } else {
+                otherInput.style.display = "none";  // Hide input field
+            }
+        }
+
+        // Ensure the function runs on page load in case "Other" was preselected
+        document.addEventListener("DOMContentLoaded", function () {
+            toggleOtherInput();
+        });
+    </script>
+
+</body>
+</html>

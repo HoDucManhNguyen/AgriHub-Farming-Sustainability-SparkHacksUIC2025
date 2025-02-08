@@ -73,6 +73,7 @@ section {
     margin: 0 1rem;
     font-size: 1.7rem;
     color: var(--main-color);
+    text-decoration: none;
 }
 
 .header .btn {

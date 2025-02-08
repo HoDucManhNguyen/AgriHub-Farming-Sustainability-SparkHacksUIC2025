@@ -40,7 +40,7 @@
 
     <!-- Business data section starts -->
     <section class="business-data" id="business-data">
-        <h1 class="heading"><span></span></h1>
+        <h1 class="heading"><span>Business Data</span></h1>
         <div id="businessContainer"></div>
     </section>
     <!-- Business data section ends -->
@@ -69,8 +69,8 @@
                                 <p class="card-text"><b>Insurance:</b> ${business.insurance ? 'Yes' : 'No'}</p>
                             </div>
                             <div class="card-actions">
-                                <button class="btn approve">Accept</button>
-                                <button class="btn reject">Reject</button>
+                                <button type="button" class="btn approve" onclick="handleAction(this, 'Approved Successfully', '#00BF63')">Accept</button>
+                                <button type="button" class="btn reject" onclick="handleAction(this, 'Rejected Successfully', 'red')">Reject</button>
                             </div>
                         </div>
                         </form>
@@ -82,6 +82,11 @@
                 console.error('Error fetching business data:', error);
                 document.getElementById("businessContainer").innerHTML = `<strong>Error fetching business data:</strong> ${error.message}`;
             }
+        }
+
+        function handleAction(button, message, color) {
+            const cardActions = button.parentElement;
+            cardActions.innerHTML = `<p class="card-text" style="color: ${color};">${message}</p>`;
         }
 
         document.addEventListener("DOMContentLoaded", fetchBusinessData);

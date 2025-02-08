@@ -109,6 +109,11 @@ span {
     border: var(--border);
 }
 
+.card-text {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
 .location form .box {
     width: 100%;
     padding: 1rem 1.2rem;
@@ -219,12 +224,10 @@ select::after {
 
 .card-title {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
-.card-text {
-    margin: 10px 0;
-}
+
 
 .card-icons a {
     margin-right: 10px;

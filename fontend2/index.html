@@ -2,13 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriHub</title>
-
-    <!-- Link to css file -->
-    <link rel="stylesheet" href="./css/index.css">
-    <!-- Logo website -->
-    <link rel="icon" href="image/webiste-logo.svg" type="image/x-icon" />
 
     <!-- Link to swiper css  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -16,8 +12,282 @@
 
     <!-- Link to get icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Logo website -->
+    <link rel="icon" href="./image/webiste-logo.svg" type="image/x-icon" />
 </head>
 <body>
+
+
+
+    <!-- Header section starts -->
+
+    <header class="header">
+	
+        <div id="menu-btn" ></div>
     
+        <a href="#" class="logo"><i class="fa fa-seedling"></i>AgriHub</a>
+    
+        
+        <!--#history, #menu, #location,... are used to jump to the section with the corresponding id.-->
+        <nav class="navbar">
+            <a data-active="home" href="#">home</a>
+            <a data-active="about-us" href="#about-us">About Us</a>
+            <a data-active="order" href="order.html">order</a>
+        </nav>
+        
+        <a href="starting.html" class="btn">Getting Started</a>
+    </header>
+
+    <!-- Header section ends -->
+
+
+
+
+    <!-- Home section starts -->
+
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Agriculture Hub</h3>
+                <p>An AI-driven Platform bringing together Innovators, 
+                    Learners, Future Farmers and Service Providers for 
+                    Sustainable Agricultural Practices... </p>
+                <a href="#" class="btn">Explore Now!</a>
+            </div>
+
+            <div class="book-slider">
+                <a href="#" class="swiper-slide"><img src="image/book-1.png" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home section ends -->
+
+
+
+
+
+
+
+    <!-- About us section starts -->
+
+
+    <section class="about-us" id="about-us">
+
+        <h1 class="heading"> established about-us <span>Only the best for the best</span> </h1>
+    
+        <div class="row">
+    
+            <div class="image">
+                <img src="image/about-us.jpeg" alt="">
+            </div>
+            
+            <div class="content">
+                <h3 class="title">Become a talented student</h3>
+                <p>With useful courses, diverse materials spanning all areas of expertise even the most specialized. The content is easy to understand, profound, full of creativity.</p>
+                <a href="#" class="btn">Explore Now</a>	
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- About us section ends -->
+
+
+
+
+
+
+    <!-- Blog section starts -->
+    <section class="category" id="category">
+        <h1 class="heading">our <span>Top categories</span></h1>
+
+        <div class="swiper category-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-1.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Computer Science</h3>
+                        <p>Explore the endless possibilities of creating innovative technologies and shaping the future 
+                            through the exciting world of computer science.</p>
+                        <a href="#" class="btn">Read more</a>
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>19th May, 2023</a>
+                            <a href="#"><i class="fas fa-user"></i>By NoteJam</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-2.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Marketing</h3>
+                        <p>
+                            Unleash your creativity and strategic thinking in the dynamic realm of marketing, 
+                            where you can shape consumer behavior.</p>
+                        <a href="#" class="btn">Read more</a>
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>19th May, 2023</a>
+                            <a href="#"><i class="fas fa-user"></i>By NoteJam</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-3.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Business</h3>
+                        <p>Embark on a journey to understand the intricacies of the corporate world, where you can develop 
+                            essential skills in strategic decision-making. </p>
+                        <a href="#" class="btn">Read more</a>
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>19th May, 2023</a>
+                            <a href="#"><i class="fas fa-user"></i>By NoteJam</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-4.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>photography</h3>
+                        <p>Immerse yourself in the magic of light, composition, and visual aesthetics 
+                            and creating powerful images that evoke emotion and leave a 
+                            lasting impact.</p>
+                        <a href="#" class="btn">Read more</a>
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>19th May, 2023</a>
+                            <a href="#"><i class="fas fa-user"></i>By NoteJam</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-5.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Music</h3>
+                        <p>Immerse yourself in the rich history, theory
+                            and let your creativity soar as you explore new sounds and leave your mark on the world of music.</p>
+                        <a href="#" class="btn">Read more</a>
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>19th May, 2023</a>
+                            <a href="#"><i class="fas fa-user"></i>By NoteJam</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Blog section ends -->
+
+
+
+
+
+    <!-- Banner section starts  -->
+
+    <section class="banner">
+
+        <div class="image">
+            <img src="image/banner.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <span>Summer time!</span>
+            <h3>best courses updated</h3>
+            <p>sale get up to 50% off</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+
+    </section>
+
+    <!-- Banner section ends -->
+
+
+
+
+    <!-- Footer section starts.-->
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>headquarters</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 78 Pirie St, Australia</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 15 Cracknell Red, USA</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 15 Cracknell Red, USA</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 15 Cracknell Red, USA</a>
+            </div>
+
+            <div class="box">
+                <h3>contact</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 352</a>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 433</a>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 433</a>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 433</a>
+            </div>
+
+            <div class="box">
+                <h3>quick access</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Library</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Books</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Courses</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Studylists</a>
+            </div>
+
+
+            <div class="box">
+                <h3>Social media</h3>
+                <a href="#" class="gmail"> <i class="fas fa-envelope"></i> NoteJam@gmail.com.au</a>
+                <a href="#"> <i class="fab fa-facebook"></i> NoteJam</a>
+                <a href="#"> <i class="fab fa-instagram"></i> NoteJam</a>
+                <a href="#"> <i class="fab fa-twitter"></i> NoteJam</a>
+            </div>
+
+            
+        </div>
+
+        <div class="end"> <i class="fa fa-seedling"></i>NoteJam | Best place for studying</div>
+        
+    </section>
+    <!-- Footer section ends.-->
+
+
+
+
+    <!-- Link to swiper js  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <!-- Link to js file -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

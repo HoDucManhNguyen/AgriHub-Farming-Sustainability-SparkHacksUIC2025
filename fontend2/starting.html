@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriHub</title>
+
+    <!-- Link to swiper css  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Link to get icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="./css/starting.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Logo website -->
+    <link rel="icon" href="./image/webiste-logo.svg" type="image/x-icon" />
+</head>
+<body>
+    <!-- Header section starts -->
+
+    <header class="header">
+	
+        <div id="menu-btn" ></div>
+    
+        <a href="#" class="logo"><i class="fa fa-seedling"></i>AgriHub</a>
+    
+        
+        <!--#history, #menu, #location,... are used to jump to the section with the corresponding id.-->
+        <nav class="navbar">
+            <a data-active="home" href="index.html">home</a>
+            <a data-active="about-us" href="#about-us">About Us</a>
+            <a data-active="location" href="location.html">location</a>
+        </nav>
+        
+        <a href="starting.html" class="btn">Getting Started</a>
+    </header>
+
+    <!-- Header section ends -->
+
+
+    <section class="location" id="location">
+
+        <h1 class="heading"> <span>Location</span> </h1>
+    
+        <form action="Fill_in_API_here" method="post" id="form">
+    
+            <label class="heading"> <span>Input Location</span> </label>
+    
+                <!--City-->
+                <input type="text" placeholder="City" class="box" id="city" name="city">
+            </div>
+    
+            <!--County-->
+            <input type="text" placeholder="County" class="box" name="county" id="county">
+    
+            <select name="state" id="state">
+                <option value="">Select a state</option>
+                <option value="AL">Alabama, AL</option>
+                <option value="AK">Alaska, AK</option>
+                <option value="AZ">Arizona, AZ</option>
+                <option value="AR">Arkansas, AR</option>
+                <option value="CA">California, CA</option>
+                <option value="CO">Colorado, CO</option>
+                <option value="CT">Connecticut, CT</option>
+                <option value="DE">Delaware, DE</option>
+                <option value="FL">Florida, FL</option>
+                <option value="GA">Georgia, GA</option>
+                <option value="HI">Hawaii, HI</option>
+                <option value="ID">Idaho, ID</option>
+                <option value="IL">Illinois, IL</option>
+                <option value="IN">Indiana, IN</option>
+                <option value="IA">Iowa, IA</option>
+                <option value="KS">Kansas, KS</option>
+                <option value="KY">Kentucky, KY</option>
+                <option value="LA">Louisiana, LA</option>
+                <option value="ME">Maine, ME</option>
+                <option value="MD">Maryland, MD</option>
+                <option value="MA">Massachusetts, MA</option>
+                <option value="MI">Michigan, MI</option>
+                <option value="MN">Minnesota, MN</option>
+                <option value="MS">Mississippi, MS</option>
+                <option value="MO">Missouri, MO</option>
+                <option value="MT">Montana, MT</option>
+                <option value="NE">Nebraska, NE</option>
+                <option value="NV">Nevada, NV</option>
+                <option value="NH">New Hampshire, NH</option>
+                <option value="NJ">New Jersey, NJ</option>
+                <option value="NM">New Mexico, NM</option>
+                <option value="NY">New York, NY</option>
+                <option value="NC">North Carolina, NC</option>
+                <option value="ND">North Dakota, ND</option>
+                <option value="OH">Ohio, OH</option>
+                <option value="OK">Oklahoma, OK</option>
+                <option value="OR">Oregon, OR</option>
+                <option value="PA">Pennsylvania, PA</option>
+                <option value="RI">Rhode Island, RI</option>
+                <option value="SC">South Carolina, SC</option>
+                <option value="SD">South Dakota, SD</option>
+                <option value="TN">Tennessee, TN</option>
+                <option value="TX">Texas, TX</option>
+                <option value="UT">Utah, UT</option>
+                <option value="VT">Vermont, VT</option>
+                <option value="VA">Virginia, VA</option>
+                <option value="WA">Washington, WA</option>
+                <option value="WV">West Virginia, WV</option>
+                <option value="WI">Wisconsin, WI</option>
+                <option value="WY">Wyoming, WY</option>
+            </select>
+            
+
+            
+    
+            	
+            
+            <!--Submit button.-->
+            <input type="submit" value="Submit" class="btn">
+        </form>
+        
+    </section>
+</body>
+</html>

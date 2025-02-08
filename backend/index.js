@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import chatRoutes from './src/routes/chatRoutes.js';
 import formRoutes from './src/routes/locationFormRoutes.js';
+import businessRoutes from './src/routes/businessRoutes.js';
 
 dotenv.config(); // Load environment variables
 
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use(chatRoutes);
 app.use(formRoutes);
+app.use(businessRoutes)
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Sparkle API!');

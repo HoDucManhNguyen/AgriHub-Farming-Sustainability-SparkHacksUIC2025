@@ -13,8 +13,13 @@
 }
 
 .header .logo {
-    color: var(--main-color);
-    font-size: 2.3rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #444;
+}
+
+.fa-seedling {
+    color: #51d0de;
 }
 
 

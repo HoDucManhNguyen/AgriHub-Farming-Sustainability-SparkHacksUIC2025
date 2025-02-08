@@ -1,31 +1,34 @@
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import HomePage from './HomePage';
+import AboutUs from './AboutUs';
 
 function Menu() {
     return (
-        <div>
-            <header class="header">
+        <Router>
+            <div>
+                <header className="header">
+                    <div id="menu-btn"></div>
 
-                <div id="menu-btn" ></div>
+                    <a href="#" className="logo"><i className="fa fa-seedling"></i>NoteJam</a>
 
-                <a href="#" class="logo">NoteJam</a>
+                    {/* Navigation */}
+                    <nav className="navbar">
+                        <Link to="/home">Home</Link>
+                        <Link to="/about">About</Link>
+                        <Link to="#">Admin</Link>
+                    </nav>
 
+                    <a href="#" className="btn">Getting Started</a>
+                </header>
 
-                {/* #history, #menu, #location,... are used to jump to the section with the corresponding id. */}
-                <nav class="navbar">
-                    <a data-active="home" href="#">Home</a>
-                    <a data-active="about" href="#">About</a>
-                    <a data-active="category" href="#">Category</a>
-                    <a data-active="discount" href="#">Discount</a>
-
-                </nav>
-
-                <a href="#" class="btn">Eco Grow</a>
-            </header>
-        </div>
-
-    )
+                {/* Define Routes */}
+                <Routes>
+                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/about" element={<AboutUs />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
-
-
-
 
 export default Menu;

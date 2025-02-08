@@ -1,0 +1,59 @@
+.home {
+    background: url(../assets/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 42rem;
+}
+
+.home .row .book-slider {
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+.home .row .book-slider a img {
+    height: 25rem;
+    cursor: default;
+}
+
+.home .row .content h3 {
+    color: var(--black);
+    font-size: 4.5rem;
+}
+
+.home .row .content p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--blue);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--dark-color);
+
+}

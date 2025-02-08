@@ -1,5 +1,5 @@
 /*The import section below is used to get the font.*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&family=Poppins:wght@100;300;400;500;600&display=swap');
 
 
 
@@ -11,6 +11,13 @@
     --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
     --border: .2rem solid var(--main-color);
     --border-hover: .2rem dashed var(--main-color);
+    --blue: #51d0de;
+    --dark-color: #27c7d7;
+    --black: #444;
+    --light-color: #666;
+    --border: .1rem solid rgba(0, 0, 0, .1);
+    --border-hover: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
 
@@ -19,7 +26,7 @@
 /* Selects all elements*/
 /*transition allows you to change property values smoothly, over a given duration.*/
 * {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,13 +34,14 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all .2 linear;
+    transition: all .2s linear;
+    transition: width none;
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top: 7rem;
+    scroll-padding-top: 5rem;
     scroll-behavior: smooth;
 }
 

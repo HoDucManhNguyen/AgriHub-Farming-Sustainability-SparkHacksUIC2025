@@ -1,0 +1,79 @@
+{
+    "businesses": [
+      {
+        "id": 1,
+        "business_name": "Green Farms Co",
+        "address": "123 Farm Road, Chicago, IL 60601",
+        "contact_information": {
+          "email": "contact@greenfarms.com",
+          "phone": "312-555-0123",
+          "url": "www.greenfarms.com"
+        },
+        "business_type": ["organic farming", "crop production"],
+        "year_in_business": 10,
+        "service_area": "Greater Chicago Area",
+        "registration": true,
+        "insurance": true
+      },
+      {
+        "id": 2,
+        "business_name": "John Deere",
+        "address": "One John Deere Place, Moline, IL 61265",
+        "contact_information": {
+          "email": "info@johndeere.com",
+          "phone": "800-537-8233",
+          "url": "www.deere.com"
+        },
+        "business_type": ["agricultural machinery", "construction equipment"],
+        "year_in_business": 184,
+        "service_area": "Worldwide",
+        "registration": true,
+        "insurance": true
+      },
+      {
+        "id": 3,
+        "business_name": "Organic Solutions",
+        "address": "456 Green Street, Chicago, IL 60602",
+        "contact_information": {
+          "email": "info@organicsolutions.com",
+          "phone": "312-555-0456",
+          "url": "www.organicsolutions.com"
+        },
+        "business_type": ["organic fertilizers", "soil testing"],
+        "year_in_business": 5,
+        "service_area": "Chicago Metropolitan Area",
+        "registration": true,
+        "insurance": true
+      },
+      {
+        "id": 4,
+        "business_name": "AgriTech Innovations",
+        "address": "789 Innovation Drive, San Francisco, CA 94103",
+        "contact_information": {
+          "email": "contact@agritech.com",
+          "phone": "415-555-1234",
+          "url": "www.agritech.com"
+        },
+        "business_type": ["agricultural technology", "precision farming"],
+        "year_in_business": 8,
+        "service_area": "California",
+        "registration": true,
+        "insurance": true
+      },
+      {
+        "id": 5,
+        "business_name": "Farm Fresh Produce",
+        "address": "321 Market Street, New York, NY 10001",
+        "contact_information": {
+          "email": "sales@farmfresh.com",
+          "phone": "212-555-6789",
+          "url": "www.farmfresh.com"
+        },
+        "business_type": ["fresh produce", "organic vegetables"],
+        "year_in_business": 12,
+        "service_area": "New York City",
+        "registration": true,
+        "insurance": true
+      }
+    ]
+  }

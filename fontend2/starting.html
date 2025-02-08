@@ -117,6 +117,8 @@
             <!--Submit button.-->
             <input type="submit" value="Submit" class="btn">
         </form>
+
+        <div id="responseMessage" style="margin-top: 20px; font-size: 1.5rem; color: green;"></div>
         
     </section>
 
@@ -125,45 +127,55 @@
 
     <script>
         document.getElementById("locationForm").addEventListener("submit", async function(event) {
-            event.preventDefault(); // Prevents default form submission
-    
-            const city = document.getElementById("city").value;
-            const county = document.getElementById("county").value;
-            const state = document.getElementById("state").value;
-    
-            if (!state) {
-                document.getElementById("responseMessage").innerText = "Please select a state.";
-                return;
-            }
-    
-            const formData = {
-                city: city,
-                county: county,
-                state: state
-            };
-    
-            try {
-                const response = await fetch("http://localhost:3000/api/form", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(formData)
-                });
-    
-                const data = await response.json();
+    event.preventDefault(); // Prevent default form submission
 
-                console.log(data);
-    
-                if (response.ok) {
-                    document.getElementById("responseMessage").innerText = "Success: " + data.message;
-                } else {
-                    document.getElementById("responseMessage").innerText = "Error: " + data.error;
-                }
-            } catch (error) {
-                document.getElementById("responseMessage").innerText = "Networkd error. Please try again.";
-            }
+    const city = document.getElementById("city").value;
+    const county = document.getElementById("county").value;
+    const state = document.getElementById("state").value;
+    const responseDiv = document.getElementById("responseMessage"); // ✅ Define responseDiv
+
+    if (!state) {
+        responseDiv.innerText = "Please select a state.";
+        return;
+    }
+
+    const formData = {
+        city: city,
+        county: county,
+        state: state
+    };
+
+    try {
+        const response = await fetch("http://localhost:3000/api/form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
         });
+
+        const data = await response.json();
+        console.log(data); // Debugging in console
+
+        if (response.ok) {
+            responseDiv.innerHTML = `
+                <h3>Top Recommended Crops:</h3>
+                <ul>
+                    ${data.response.top_crops.map(crop => `
+                        <li>
+                            <strong>${crop.name}</strong>: ${crop.short_description}<br>
+                            <em>Reason:</em> ${crop.reason}
+                        </li>
+                    `).join('')}
+                </ul>
+            `;
+        } else {
+            responseDiv.innerHTML = `<strong>Error:</strong> ${data.error}`;
+        }
+    } catch (error) {
+        responseDiv.innerHTML = `<strong>Network Error:</strong> Please try again.`;
+    }
+});
     </script>
 </body>
 </html>

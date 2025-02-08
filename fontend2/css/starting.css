@@ -187,3 +187,65 @@ select::after {
 }
 
 /* Location form section ends */
+
+/* Data Printout section starts */
+.swiper-container {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 30rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: #666;
+    padding-top: 1rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.card-icons a {
+    text-decoration: none;
+    color: #444;
+}
+
+.card-icons a i {
+    margin-right: 0.5rem;
+}
+
+/* Data Printout section ends */

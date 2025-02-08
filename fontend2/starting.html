@@ -152,16 +152,34 @@
                             (crop, index) => `
                         <div class="card">
                             <div class="card-content">
+
                                 <h3 class="card-title" onclick="toggleDetails(${index})" style="cursor: pointer;">${crop.name}</h3>
-                                <div id="details-${index}" style="display: none;">
-                                    <p class="card-text">${crop.short_description}</p>
-                                    <p class="card-text"><b>Reason: </b> ${crop.reason}</p>
-                                    <p class="card-text"><b>Watering: </b> ${crop.property.crop_advice.Watering}</p>
-                                    <p class="card-text"><b>Fertilizers: </b> ${crop.property.crop_advice.Fertilizers}</p>
-                                    <p class="card-text"><b>Pesticides: </b> ${crop.property.crop_advice.Pesticides}</p>
-                                    <p class="card-text"><b>Challenges: </b> ${crop.property.crop_advice.Challenges}</p>
-                                    <p class="card-text"><b>Estimated Cost: </b> ${crop.property.crop_advice['Estimated Cost']}</p>
-                                </div>
+                                <p class="card-text">${crop.short_description}</p>
+                                <p class="card-text"><b>Reason: </b> ${crop.reason}</p>
+                                
+                                <p class="card-text"><b>Farming Advices: </b> </p>
+                                <ul>
+                                    <li><b>Watering: </b> ${crop.farming_advice.watering}</li>
+                                    <li><b>Fertilizers: </b> ${crop.farming_advice.fertilizer_use}</li>
+                                    <li><b>Pesticides: </b> ${crop.farming_advice.pesticide_use}</li>
+                                    <li><b>Challenges: </b> ${crop.farming_advice.challenges}</li>
+                                    <li><b>Season: </b> ${crop.farming_advice.seasons}</li>
+                                    <li><b>Estimated Cost: </b> ${crop.farming_advice.estimated_costs}</li>
+                                </ul>
+                                <p class="card-text"><b>Startup Resources: </b> </p>
+                                <ul>
+                                    <li><b>Seeds: </b> ${crop.startup_resources.seeding}</li>
+                                    <li><b>Irrigation Systems: </b> ${crop.startup_resources.irrigation_systems}</li>
+                                    <li><b>Fertilizers, Pest Control: </b> ${crop.startup_resources.fertilizers_and_pest_controls}</li>
+                                    <li><b>Soil Testing: </b> ${crop.startup_resources.soil_testing}</li>
+                                </ul>
+                                <p class="card-text"><b>Suggested Companies: </b> </p>
+                                <ul>
+                                    <li><b>Seeds: </b> ${crop.company.seeding}</li>
+                                    <li><b>Irrigation Systems: </b> ${crop.company.irrigation_systems}</li>
+                                    <li><b>Fertilizers, Pest Control: </b> ${crop.company.fertilizers_and_pest_controls}</li>
+                                    <li><b>Soil Testing: </b> ${crop.company.soil_testing}</li>
+                                </ul>
                             </div>
                         </div>
                         `
@@ -175,7 +193,9 @@
             } else {
                 responseDiv.innerHTML = `<strong>Error:</strong> ${data.error}`;
             }
+
         } catch (error) {
+            console.error(error);
             responseDiv.innerHTML = `<strong>Network Error:</strong> Please try again.`;
         }
     });

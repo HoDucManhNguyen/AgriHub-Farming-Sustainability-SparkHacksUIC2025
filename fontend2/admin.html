@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriHub</title>
+
+    <!-- Link to swiper css  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Link to get icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="./css/business.css">
+    <link rel="stylesheet" href="./css/starting.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/admin.css">
+
+    <!-- Logo website -->
+    <link rel="icon" href="./image/webiste-logo.svg" type="image/x-icon" />
+</head>
+<body>
+    
+    <!-- Header section starts -->
+    <header class="header">
+        <div id="menu-btn"></div>
+        <a href="#" class="logo"><i class="fa fa-seedling"></i>AgriHub</a>
+        
+        <nav class="navbar">
+            <a data-active="home" href="index.html">home</a>
+            <a data-active="Business" href="business.html">Business</a>
+            <a data-active="admin" id="current">Admin</a>
+        </nav>
+        
+        <a href="starting.html" class="btn">Getting Started</a>
+    </header>
+    <!-- Header section ends -->
+
+    <!-- Business data section starts -->
+    <section class="business-data" id="business-data">
+        <h1 class="heading"><span>Business Data</span></h1>
+        <div id="businessContainer"></div>
+    </section>
+    <!-- Business data section ends -->
+
+    <script>
+        async function fetchBusinessData() {
+            try {
+                const response = await fetch("http://localhost:3000/api/businesses");
+                const data = await response.json();
+                const businessContainer = document.getElementById("businessContainer");
+
+                if (Array.isArray(data)) {
+                    businessContainer.innerHTML = data.map(business => `
+                        <form>
+                        <div class="card" id="card2">
+                            <div class="card-content">
+                                <h3 class="card-title">${business.business_name}</h3>
+                                <p class="card-text"><b>Address:</b> ${business.address}</p>
+                                <p class="card-text"><b>Email:</b> ${business.contact_information.email}</p>
+                                <p class="card-text"><b>Phone:</b> ${business.contact_information.phone}</p>
+                                <p class="card-text"><b>Website:</b> <a href="${business.contact_information.url}" target="_blank">${business.contact_information.url}</a></p>
+                                <p class="card-text"><b>Business Type:</b> ${business.business_type.join(', ')}</p>
+                                <p class="card-text"><b>Years in Business:</b> ${business.year_in_business}</p>
+                                <p class="card-text"><b>Service Area:</b> ${business.service_area}</p>
+                                <p class="card-text"><b>Registration:</b> ${business.registration ? 'Yes' : 'No'}</p>
+                                <p class="card-text"><b>Insurance:</b> ${business.insurance ? 'Yes' : 'No'}</p>
+                            </div>
+                            <div class="card-actions">
+                                <button type="button" class="btn approve" onclick="handleAction(this, 'Approved Successfully', '#00BF63')">Accept</button>
+                                <button type="button" class="btn reject" onclick="handleAction(this, 'Rejected Successfully', 'red')">Reject</button>
+                            </div>
+                        </div>
+                        </form>
+                    `).join('');
+                } else {
+                    businessContainer.innerHTML = "<strong>No business data found.</strong>";
+                }
+            } catch (error) {
+                console.error('Error fetching business data:', error);
+                document.getElementById("businessContainer").innerHTML = `<strong>Error fetching business data:</strong> ${error.message}`;
+            }
+        }
+
+        function handleAction(button, message, color) {
+            const cardActions = button.parentElement;
+            cardActions.innerHTML = `<p class="card-text" style="color: ${color};">${message}</p>`;
+        }
+
+        document.addEventListener("DOMContentLoaded", fetchBusinessData);
+    </script>
+
+</body>
+</html>

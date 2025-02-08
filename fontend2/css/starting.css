@@ -109,6 +109,11 @@ span {
     border: var(--border);
 }
 
+.card-text {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
 .location form .box {
     width: 100%;
     padding: 1rem 1.2rem;
@@ -195,38 +200,48 @@ select::after {
 /* Data Printout section starts */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
-    gap: 20px; /* Adjust the gap between cards as needed */
+    grid-template-columns: repeat(3, 1fr);
+    /* Creates three equal columns */
+    gap: 20px;
+    /* Adjust the gap between cards as needed */
     margin-top: 20px;
-  }
-  
-  .card {
+}
+
+.card {
     background: #fff;
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  /* Additional styling for card content if needed */
-  .card-content {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+    padding: 5rem;
+}
+
+/* Additional styling for card content if needed */
+.card-content {
     text-align: left;
-  }
-  
-  .card-title {
+}
+
+.card-title {
     margin-top: 0;
-    font-size: 1.2em;
-  }
-  
-  .card-text {
-    margin: 10px 0;
-  }
-  
-  .card-icons a {
+    font-size: 1.5em;
+}
+
+
+
+.card-icons a {
     margin-right: 10px;
     color: #555;
     text-decoration: none;
-  }
-  
+}
+
+.location form {
+    margin: 0 auto 2rem auto;
+    max-width: 60rem;
+    padding: 7rem;
+    border: var(--border);
+    margin-bottom: 12rem;
+}
+
 
 /* Data Printout section ends */

@@ -22,7 +22,7 @@
 <body>
 
     <header class="header">
-	
+    
         <div id="menu-btn" ></div>
 
         <a href="#" class="logo"><i class="fa fa-seedling"></i>AgriHub</a>
@@ -31,10 +31,10 @@
         <nav class="navbar">
             <a data-active="home" href="index.html">home</a>
             <a data-active="business" href="business.html">Business</a>
-            <a data-active="location" href="location.html">location</a>
+            <a data-active="login" href="login.html">Admin</a>
         </nav>
         
-        <a href="starting.html" class="btn">Getting Started</a>
+        <a href="#" class="btn">Getting Started</a>
     </header>
 
 
@@ -103,10 +103,6 @@
             </select>
             
 
-            
-    
-            	
-            
             <!--Submit button.-->
             <input type="submit" value="Submit" class="btn">
         </form>
@@ -146,48 +142,6 @@
             const data = await response.json();
             console.log(data); // Debugging in console
     
-            // if (response.ok) {
-            //     if (Array.isArray(data.response.top_crops)) {
-            //         responseDiv.innerHTML = `
-            //             <h1 class="heading"><span>Top Recommended Crops</span></h1>
-            //             <div class="swiper-container">
-            //                 <div class="swiper-wrapper">
-            //                     ${data.response.top_crops.map(crop => `
-            //                         <div class="swiper-slide">
-            //                             <div class="card">
-            //                                 <div class="card-content">
-            //                                     <h3 class="card-title">${crop.name}</h3>
-            //                                     <p class="card-text">${crop.short_description}</p>
-            //                                     <div class="card-icons">
-            //                                         <a href="#"><i class="fas fa-calendar"></i> 8th Feb, 2025</a>
-            //                                         <a href="#"><i class="fas fa-user"></i> AgriHub</a>
-            //                                     </div>
-            //                                 </div>
-            //                             </div>
-            //                         </div>
-            //                     `).join('')}
-            //                 </div>
-            //             </div>
-            //         `;
-    
-            //         // Initialize Swiper
-            //         new Swiper(".swiper-container", {
-            //             loop: true,
-            //             navigation: {
-            //                 nextEl: ".swiper-button-next",
-            //                 prevEl: ".swiper-button-prev",
-            //             },
-            //             pagination: {
-            //                 el: ".swiper-pagination",
-            //                 clickable: true,
-            //             },
-            //         });
-            //     } else {
-            //         responseDiv.innerHTML = "<strong>No crops found.</strong>";
-            //     }
-            // } else {
-            //     responseDiv.innerHTML = `<strong>Error:</strong> ${data.error}`;
-            // }
             if (response.ok) {
                 if (Array.isArray(data.response.top_crops)) {
                     responseDiv.innerHTML = `
@@ -195,10 +149,11 @@
                     <div class="cards-container">
                         ${data.response.top_crops
                         .map(
-                            (crop) => `
+                            (crop, index) => `
                         <div class="card">
                             <div class="card-content">
-                                <h3 class="card-title">${crop.name}</h3>
+
+                                <h3 class="card-title" onclick="toggleDetails(${index})" style="cursor: pointer;">${crop.name}</h3>
                                 <p class="card-text">${crop.short_description}</p>
                                 <p class="card-text"><b>Reason: </b> ${crop.reason}</p>
                                 
@@ -244,8 +199,17 @@
             responseDiv.innerHTML = `<strong>Network Error:</strong> Please try again.`;
         }
     });
-</script>
+
+    function toggleDetails(index) {
+        const details = document.getElementById(`details-${index}`);
+        if (details.style.display === "none") {
+            details.style.display = "block";
+        } else {
+            details.style.display = "none";
+        }
+    }
+    </script>
         
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </body>
 </html>

@@ -42,9 +42,16 @@ nav a.active {
     text-decoration: underline var(--border-hover);
 }
 
+body {
+    background-image: url('../image/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-
-
+#current {
+    color: #00BF63;
+}
 
 
 /* Header section starts */

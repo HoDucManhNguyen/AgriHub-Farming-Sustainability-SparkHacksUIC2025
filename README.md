@@ -9,7 +9,7 @@ npm run start:dev # to start server
 npm run json-server # to start database hosting locally
 ```
 
-You will need live server plugin to run fontend2/index.html. (install live server plugin in extension)
+You will need live server plugin to run frontend/index.html. (install live server plugin in extension)
 frontent wrote in  html, css, javascript.
 backend wrote in nodejs, express, axios.
 

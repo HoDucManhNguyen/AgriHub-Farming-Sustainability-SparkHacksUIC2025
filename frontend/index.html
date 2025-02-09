@@ -1,19 +1,276 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NoteJam</title>
-    <!--The link below is used to get some icons icluding facebook, instagram, email, phone,... icon.-->
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriHub</title>
 
-    <!--The link below to get logo for the website-->
-    <link rel="icon" href="./src/assets/webiste-logo.svg" type="image/x-icon" />
+    <!-- Link to swiper css  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <!-- Link to get icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Logo website -->
+    <link rel="icon" href="./image/webiste-logo.svg" type="image/x-icon" />
+</head>
+<body>
+
+
+
+    <!-- Header section starts -->
+
+    <header class="header">
+	
+        <div id="menu-btn" ></div>
+    
+        <a href="#" class="logo"><i class="fa fa-seedling"></i>AgriHub</a>
+    
+        
+        <nav class="navbar">
+            <a data-active="home" id="current">home</a>
+            <a data-active="business" href="business.html">Business</a>
+            <a data-active="admin" href="login.html">Admin</a>
+        </nav>
+        
+        <a href="starting.html" class="btn">Getting Started</a>
+    </header>
+
+    <!-- Header section ends -->
+
+
+
+
+    <!-- Home section starts -->
+
+    <section class="home" id="home">
+        <div class="row">
+        </div>
+    </section>
+
+    <!-- Home section ends -->
+
+
+
+
+
+
+
+    <!-- About us section starts -->
+
+
+    <section class="about-us" id="about-us">
+
+        <h1 class="heading"> established about-us <span>Agricultural Hub</span> </h1>
+    
+        <div class="row">
+    
+            <div class="image">
+                <img src="image/aboutus.png" alt="">
+            </div>
+            
+            <div class="content">
+                <h3 class="title">Farming For Sustainability</h3>
+                <p>AgriHub is an AI-driven web-based platform that connects individuals and businesses in agriculture with tools, knowledge, and trusted service providers, fostering sustainable growth and resource efficiency in Agriculture.
+                </p>
+                <a href="starting.html" class="btn">Explore Now</a>	
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- About us section ends -->
+
+
+
+
+
+
+    <!-- Blog section starts -->
+    <section class="category" id="category">
+        <h1 class="heading">our <span>Top Features</span></h1>
+
+        <div class="swiper category-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-1.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>AI-Powered</h3>
+                        <p>Based on your location & climate, suggest & tailor top-three crops suitable for growing + technical advices & resources. Powered by ChatGPT 4o</p>
+                        <!-- <a href="#" class="btn">Read more</a> -->
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>8th Feb, 2025</a>
+                            <a href="#"><i class="fas fa-user"></i>AgriHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-2.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Sustainable Guides</h3>
+                        <p>
+                            Access to educational resources and best practices that help users grow crops with minimal environmental impact.</p>
+                        <!-- <a href="#" class="btn">Read more</a> -->
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>8th Feb, 2025</a>
+                            <a href="#"><i class="fas fa-user"></i>AgriHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-3.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Advertisements</h3>
+                        <p>A trusted network of verified agricultural service providers, with the added ability for businesses to advertise their services and products to a targeted audience. </p>
+                        <!-- <a href="#" class="btn">Read more</a> -->
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>8th Feb, 2025</a>
+                            <a href="#"><i class="fas fa-user"></i>AgriHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-4.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Business System</h3>
+                        <p>A trusted sustainable directory of verified agricultural businesses offering products and services verified by our moderators like seeds, equipment,...</p>
+                        <!-- <a href="#" class="btn">Read more</a> -->
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>8th Feb, 2025</a>
+                            <a href="#"><i class="fas fa-user"></i>AgriHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="image/category-5.jpeg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Location Matching</h3>
+                        <p>Connect with nearby agricultural service providers, ensuring easy access to the necessary resources and support for farming operations. Suggesting nearby companies and neighbours!</p>
+                        <!-- <a href="#" class="btn">Read more</a> -->
+                        <div class="icons">
+                            <a href="#"><i class="fas fa-calendar"></i>8th Feb, 2025</a>
+                            <a href="#"><i class="fas fa-user"></i>AgriHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Blog section ends -->
+
+
+
+
+
+    <!-- Banner section starts  -->
+
+    <section class="banner" id="bannersub">
+
+        <div class="image">
+            <img src="image/map.webp" alt="">
+        </div>
+
+        <div class="content">
+            <span>Hey Learners!</span>
+            <h3>Type in your Location</h3>
+            <p>Get Crop Compatibility Information</p>
+            <a href="starting.html" class="btn">Get Started Now</a>
+        </div>
+
+    </section>
+
+    <!-- Banner section ends -->
+
+
+
+
+    <!-- Footer section starts.-->
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>headquarters</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 315 S Peoria st</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 2615 Union Ave</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 1407 W 15st</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> 15 Cracknell Red</a>
+            </div>
+
+            <div class="box">
+                <h3>contact</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 352</a>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 433</a>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 433</a>
+                <a href="#"> <i class="fas fa-phone"></i> +0415 966 433</a>
+            </div>
+
+            <div class="box">
+                <h3>quick access</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Home</a>
+                <a href="#about-us"> <i class="fas fa-arrow-right"></i> About Us</a>
+                <a href="#category"> <i class="fas fa-arrow-right"></i> Top Features</a>
+                <a href="#bannersub"> <i class="fas fa-arrow-right"></i> Getting Started</a>
+            </div>
+
+
+            <div class="box">
+                <h3>Social media</h3>
+                <a href="#" class="gmail"> <i class="fas fa-envelope"></i> AgriHub@uic.edu</a>
+                <a href="#"> <i class="fab fa-facebook"></i> AgriHub</a>
+                <a href="#"> <i class="fab fa-instagram"></i> AgriHub</a>
+                <a href="#"> <i class="fab fa-twitter"></i> AgriHub</a>
+            </div>
+
+            
+        </div>
+
+        <div class="end"> <i class="fa fa-seedling"></i>AgriHub | Destinated for Agriculture lovers </div>
+        
+    </section>
+    <!-- Footer section ends.-->
+
+
+
+
+    <!-- Link to swiper js  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <!-- Link to js file -->
+    <script src="./js/script.js"></script>
+</body>
 </html>

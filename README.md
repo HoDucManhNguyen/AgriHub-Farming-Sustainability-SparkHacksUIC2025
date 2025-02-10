@@ -32,6 +32,8 @@ AI usages:
 
 AI assistance for coding is used in the project.
 
+Link demo Website: https://hoducmanhnguyen.github.io/SparkHacks-UIC-2025/frontend/index.html
+
 Authors: Linh Vu, Manh Nguyen, Han Dang, Minh Nguyen, Vu Nguyen
 
 

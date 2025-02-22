@@ -1,5 +1,30 @@
 # SparkHacks-UIC-2025
 
+In a world where food demand is rapidly increasing, AgriHub was created to bridge the gap between farmers, technology, and agricultural service providers. By 2050, the global population will reach 9.7 billion, requiring a 60% increase in food production. However, many regions still operate below their agricultural potential, and critical resources are being wasted. Our goal was to build a smart, AI-powered platform to help farmers make data-driven decisions and access verified service providers for sustainable farming.
+
+## What AgriHub Does:
+
+- AI-powered crop recommendations based on geospatial data (City, County, State).
+- Farming insights: Watering schedules, fertilizers, estimated costs, and sustainability tips.
+- Local business verification: Farmers connect with trusted service providers (seed suppliers, equipment rentals, etc.).
+- Admin dashboard for verification: Ensures credibility of businesses before recommending them.
+
+##  How We Built It:
+
+We integrated AI, machine learning, and geospatial data to generate recommendations and match farmers with the right service providers. The platform was developed using Node.js, Express.js, Axios, OpenAI APIs, JSON-Server, and HTML, CSS, JavaScript for a seamless web experience.
+
+## Challenges & Achievements:
+
+Despite working under a 24-hour hackathon deadline, our team—mostly freshmen and sophomores—successfully built an AI-driven recommendation system that personalizes crop suggestions and business connections. We overcame API integration issues, team coordination challenges, and the complexity of merging front-end and back-end systems.
+
+## What’s Next?
+
+- Expand beyond the US, using global datasets for more accurate crop matching.
+- Improve AI recommendations and interface design for better user experience.
+- Strengthen business verification for increased trust and credibility.
+
+## How to use all the features:
+
 ```bash
 npm install
 npm install axios

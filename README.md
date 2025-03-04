@@ -1,64 +1,93 @@
 # SparkHacks-UIC-2025
 
-In a world where food demand is rapidly increasing, AgriHub was created to bridge the gap between farmers, technology, and agricultural service providers. By 2050, the global population will reach 9.7 billion, requiring a 60% increase in food production. However, many regions still operate below their agricultural potential, and critical resources are being wasted. Our goal was to build a smart, AI-powered platform to help farmers make data-driven decisions and access verified service providers for sustainable farming.
+## AgriHub: Bridging Agriculture and Technology
 
-## What AgriHub Does:
+As global food demand continues to rise, AgriHub was developed to connect farmers, technology, and agricultural service providers. By 2050, the global population is projected to reach 9.7 billion, necessitating a 60% increase in food production. Despite this growing demand, many regions underperform in agricultural productivity, leading to inefficiencies and resource waste. AgriHub aims to address these challenges by leveraging AI-powered solutions to enable data-driven decision-making and facilitate connections with trusted service providers for sustainable farming.
 
-- AI-powered crop recommendations based on geospatial data (City, County, State).
-- Farming insights: Watering schedules, fertilizers, estimated costs, and sustainability tips.
-- Local business verification: Farmers connect with trusted service providers (seed suppliers, equipment rentals, etc.).
-- Admin dashboard for verification: Ensures credibility of businesses before recommending them.
+---
+## Features
 
-##  How We Built It:
+### **AgriHub Provides:**
+- **AI-Powered Crop Recommendations**: Utilizes geospatial data (City, County, State) to suggest optimal crops.
+- **Farming Insights**: Offers watering schedules, fertilizer recommendations, estimated costs, and sustainability tips.
+- **Verified Service Providers**: Connects farmers with trusted suppliers, equipment rentals, and agricultural services.
+- **Admin Dashboard for Verification**: Ensures the credibility of businesses before listing them on the platform.
 
-We integrated AI, machine learning, and geospatial data to generate recommendations and match farmers with the right service providers. The platform was developed using Node.js, Express.js, Axios, OpenAI APIs, JSON-Server, and HTML, CSS, JavaScript for a seamless web experience.
+---
+## **Technology Stack & Implementation**
 
-## Challenges & Achievements:
+### **How We Built AgriHub**
+We combined AI, machine learning, and geospatial data analysis to create intelligent crop recommendations and verified business connections. The platform utilizes:
+- **Backend**: Node.js, Express.js, Axios, OpenAI APIs, JSON-Server.
+- **Frontend**: HTML, CSS, JavaScript.
+- **AI Integration**: Custom OpenAI prompts tailored for agricultural insights.
 
-Despite working under a 24-hour hackathon deadline, our team—mostly freshmen and sophomores—successfully built an AI-driven recommendation system that personalizes crop suggestions and business connections. We overcame API integration issues, team coordination challenges, and the complexity of merging front-end and back-end systems.
+---
+## **Challenges & Achievements**
 
-## What’s Next?
+Despite the constraints of a 24-hour hackathon, our team—comprised primarily of freshmen and sophomores—successfully built an AI-driven recommendation system. We overcame:
+- **API integration issues** related to OpenAI and geospatial data.
+- **Team coordination challenges** within a short development window.
+- **Complexities in merging front-end and back-end systems** for seamless user experience.
 
-- Expand beyond the US, using global datasets for more accurate crop matching.
-- Improve AI recommendations and interface design for better user experience.
-- Strengthen business verification for increased trust and credibility.
+---
+## **Future Enhancements**
 
-## How to use all the features:
+- **Global Expansion**: Integrate international datasets for improved crop matching.
+- **Enhanced AI Recommendations**: Optimize accuracy and efficiency in suggestions.
+- **User Experience Improvements**: Refine interface design for better usability.
+- **Stronger Business Verification**: Strengthen credibility assessment of service providers.
 
+---
+## **Installation & Usage**
+
+To run AgriHub locally, follow these steps:
+
+### **Backend Setup**
 ```bash
 npm install
 npm install axios
 npm install nodemon
 npm install json-server
-npm run start:dev # to start server
-npm run json-server # to start database hosting locally
+npm run start:dev  # Start the server
+npm run json-server  # Start the local database
 ```
+> **Note:** You will need to provide an OpenAI API key in the `.env` file for AI-based functionalities.
 
-You will need live server plugin to run frontend/index.html. (install live server plugin in extension)
-frontent wrote in  html, css, javascript.
-backend wrote in nodejs, express, axios.
+### **Frontend Setup**
+To run `frontend/index.html`, use the Live Server plugin in your code editor.
 
-Backend tructure:
-You will need to provide openapi key, in .env
-It will use openAPI to call AI chats. We created custom prompts for farming purposes.
+---
+## **Project Structure**
 
-Controllers folder: handle incoming HTTP requests, process, and return them back, middle man between routes and the services
-Routes folder: defines api endpoints
-Services folder: contain the logic of the application.
+### **Backend:**
+- **`.env`**: Contains the OpenAI API key for AI-powered functionalities.
+- **`controllers/`**: Manages incoming HTTP requests and processes data.
+- **`routes/`**: Defines API endpoints.
+- **`services/`**: Contains core business logic and application functions.
 
-Frontend: index.html is the front page
-to use the suggestion on what crop to to use for a particular location. clicking on getting started
-for Business want to get in the database and be verified, use Business option
-for admin, use admin to approve or deny
+### **Frontend:**
+- **`index.html`**: Landing page.
+- **Usage Instructions:**
+  - Click **“Get Started”** to receive AI-powered crop suggestions based on location.
+  - Businesses can register for verification under the **Business** section.
+  - Administrators can approve or reject listings via the **Admin** section.
 
-AI usages: 
-- suggest user on what crop to use, based on location, weather, soil
-- get review of companies and get the verdict.
+---
+## **AI Capabilities**
+- **Crop Recommendations**: AI suggests the best crops based on geolocation, weather, and soil conditions.
+- **Business Reviews & Verification**: AI assists in evaluating service providers before listing them on the platform.
+- **AI-Assisted Development**: OpenAI’s API was used to streamline coding processes.
 
-AI assistance for coding is used in the project.
+---
+## **Live Demo**
+[**Access the AgriHub Demo**](https://hoducmanhnguyen.github.io/AgriHub-Farming-Sustainability-SparkHacksUIC2025/)
 
-Link demo Website: [https://hoducmanhnguyen.github.io/SparkHacks-UIC-2025/frontend/index.html](https://hoducmanhnguyen.github.io/AgriHub-Farming-Sustainability-SparkHacksUIC2025/)
-
-Authors: Linh Vu, Manh Nguyen, Han Dang, Minh Nguyen, Vu Nguyen
-
+---
+## **Authors**
+- **Linh Vu**
+- **Manh Nguyen**
+- **Han Dang**
+- **Minh Nguyen**
+- **Vu Nguyen**
 
